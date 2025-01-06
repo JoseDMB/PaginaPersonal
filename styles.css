@@ -161,6 +161,17 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+
+    ul{
+        font-size: 0.9rem;
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        line-height: 1.5;
+        margin-bottom: 0.5; /* Evita márgenes que afecten el tamaño */
+    }
+    
+
     header h1 {
         font-size: 1.5rem; /* Reducir tamaño del título */
     }
@@ -191,8 +202,59 @@ a:hover {
         margin: 0; /* Evita márgenes que afecten el tamaño */
     }
    
+    h3{
+        color: rgb(255, 59, 144); /* Título en blanco */
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 0.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    #Work .card-back h2 {
+        font-size: 3.3rem; /* Ajusta el tamaño según lo que necesites */
+        color:rgb(255, 255, 255); 
+        font-weight: 400;
+        margin:1%;
+    
+    }
+
+    footer{
+        /* background: repeating-linear-gradient(rgb(255, 102, 102) 90%, rgb(255, 255, 255) ); */
+        background-color: #000000;
+        
+        
+    }
+    footer p{
+        font-family: "Afacad Flux", serif;
+        font-size:  -0.6rem;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0.7rem;
+        text-align: center;
+    }
 }
 @media (max-width: 768px) {
+
+    ul{
+        font-size: 1.2rem;
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        line-height: 1.5;
+        margin-bottom: 0.5; /* Evita márgenes que afecten el tamaño */
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        perspective: 1000px; /* Perspectiva para el efecto 3D */
+        max-width: 600px; /* Tamaño fijo de ancho */
+        margin: 2rem auto; /* Centrado vertical y horizontal */
+        padding-bottom: 2%;
+       
+    }
+
     .cards-container {
         flex-direction: column; /* En pantallas pequeñas las tarjetas se apilan */
     }
@@ -205,10 +267,53 @@ a:hover {
         z-index: 2; /* Por encima de la imagen */
         text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
     }
+    h3{
+        color: rgb(255, 59, 144); /* Título en blanco */
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 0.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    #Work .card-back h2 {
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
+        color:rgb(255, 255, 255); 
+        font-weight: 400;
+        margin:1%;
+    
+    }
+
+    footer{
+        /* background: repeating-linear-gradient(rgb(255, 102, 102) 90%, rgb(255, 255, 255) ); */
+        background-color: #000000;
+        
+        
+    }
+    footer p{
+        font-family: "Afacad Flux", serif;
+        font-size:  0.7rem;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0.7rem;
+        text-align: center;
+    }
     
 }
 /* Pantallas medianas (tabletas y pequeñas laptops) */
 @media (max-width: 768px) {
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        perspective: 1000px; /* Perspectiva para el efecto 3D */
+        max-width: 600px; /* Tamaño fijo de ancho */
+        margin: 2rem auto; /* Centrado vertical y horizontal */
+        padding-bottom: 2%;
+       
+    }
+    body{margin: 0;}
+
     header h1 {
         font-size: 2.5rem;
     }
@@ -233,6 +338,43 @@ a:hover {
         font-style: normal;
         line-height: 1.5;
         margin: 0; /* Evita márgenes que afecten el tamaño */
+    }
+    h3{
+        color: rgb(255, 59, 144); /* Título en blanco */
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    #Work .card-back h2 {
+        font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
+        color:rgb(255, 255, 255); 
+        font-weight: 400;
+        margin:1%;
+    
+    }
+    #Work .card-back p {
+        font-size: 0.8rem; /* Ajusta el tamaño según lo que necesites */
+        color:rgb(255, 255, 255); 
+        font-weight: 100;
+        margin:1%;
+    
+    }
+    footer{
+        /* background: repeating-linear-gradient(rgb(255, 102, 102) 90%, rgb(255, 255, 255) ); */
+        background-color: #000000;
+        
+        
+    }
+    footer p{
+        font-family: "Afacad Flux", serif;
+        font-size:  0.7rem;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0.7rem;
+        text-align: center;
     }
 }
 
