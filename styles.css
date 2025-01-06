@@ -1,0 +1,252 @@
+/* ,rgb(8, 164, 255) */
+body{
+    background: linear-gradient(10deg,rgb(130, 255, 182),rgb(4, 245, 245),rgb(145, 248, 188));
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    color: #000000;
+    font-family: "Alegreya Sans SC", serif;
+    font-weight: 100;
+    font-size: 7rem;
+    
+}
+/* Estilos para las tarjetas interactivas */
+.card {
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px; /* Perspectiva para el efecto 3D */
+    max-width: 600px; /* Tamaño fijo de ancho */
+    height: 600px; /* Tamaño fijo de alto */
+    margin: 2rem auto; /* Centrado vertical y horizontal */
+    padding-bottom: 2%;
+   
+}
+
+ul{
+    font-size: 1.9rem;
+    font-family: "Afacad Flux", serif;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    margin-bottom: 0.5; /* Evita márgenes que afecten el tamaño */
+}
+
+.card-inner {
+    
+    position: relative;
+    width: 100%;
+    height: 100%; /* Mantén el tamaño fijo del contenedor */
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Gira la tarjeta al pasar el cursor */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Tamaño fijo */
+    backface-visibility: hidden; /* Oculta el reverso cuando no está activo */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 0; /* Fija la posición */
+    left: 0;
+}
+
+/* Parte frontal de la tarjeta (imagen + título) */
+.card-front {
+    background: black; /* Fondo predeterminado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: 2; /* Frente visible inicialmente */
+}
+
+.card-front img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Imagen ocupa todo el espacio */
+    z-index: 1;
+    opacity: 0.8; /* Leve transparencia */
+}
+
+.card-front h2 {
+    color: rgb(255, 255, 255); /* Título en blanco */
+    font-family: "Alegreya Sans SC", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 4.8rem;
+    z-index: 2; /* Por encima de la imagen */
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+}
+
+
+.card-back h2 {
+    color: rgb(255, 255, 255); /* Título en blanco */
+    font-family: "Alegreya Sans SC", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2.8rem;
+    z-index: 2; /* Por encima de la imagen */
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+}
+
+/* Parte trasera de la tarjeta (descripción) */
+.card-back {
+    background: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg); /* Oculta el reverso inicialmente */
+    padding: 1rem;
+    z-index: 1; /* Detrás del frente */
+}
+h3{
+    color: rgb(255, 59, 144); /* Título en blanco */
+    font-family: "Afacad Flux", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+}
+#Work .card-back h2 {
+    font-size: 3.3rem; /* Ajusta el tamaño según lo que necesites */
+    color:rgb(255, 255, 255); 
+    font-weight: 400;
+    margin:1%;
+
+}
+
+/* Cambiar el tamaño de los párrafos en el reverso */
+#Work .card-back p {
+    margin-bottom: 5%;
+    font-size: 1.7rem; /* Ajusta el tamaño según lo que necesites */
+     /* Opcional: para mejorar la legibilidad */
+}
+  
+.card-back p {
+    font-size: 2rem;
+    font-family: "Afacad Flux", serif;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.5;
+    margin: 0; /* Evita márgenes que afecten el tamaño */
+}
+
+a {
+    color:rgb(255, 59, 144); /* Define el color amarillo */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Opcional: subrayado al pasar el cursor */
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Reducir tamaño del título */
+    }
+    .card-front h2 {
+        color: rgb(255, 255, 255); /* Título en blanco */
+        font-family: "Alegreya Sans SC", serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 4.8rem;
+        z-index: 2; /* Por encima de la imagen */
+        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+    }
+
+    .card {
+        max-width: 250px; /* Ajusta el tamaño de las tarjetas */
+    }
+
+    .card-inner {
+        height: 300px; /* Ajusta la altura de las tarjetas */
+    }
+
+    .card-back p {
+        font-size: 1rem;
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        line-height: 1.5;
+        margin: 0; /* Evita márgenes que afecten el tamaño */
+    }
+   
+}
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* En pantallas pequeñas las tarjetas se apilan */
+    }
+    .card-front h2 {
+        color: rgb(255, 255, 255); /* Título en blanco */
+        font-family: "Alegreya Sans SC", serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 2.8rem;
+        z-index: 2; /* Por encima de la imagen */
+        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+    }
+    
+}
+/* Pantallas medianas (tabletas y pequeñas laptops) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .card-front h2 {
+        color: rgb(255, 255, 255); /* Título en blanco */
+        font-family: "Alegreya Sans SC", serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 2.8rem;
+        z-index: 2; /* Por encima de la imagen */
+        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+    }
+
+    .card {
+        max-width: 280px; /* Ajusta el tamaño de las tarjetas */
+    }
+
+    .card-back p {
+        font-size: 1rem;
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        line-height: 1.5;
+        margin: 0; /* Evita márgenes que afecten el tamaño */
+    }
+}
+
+footer{
+    /* background: repeating-linear-gradient(rgb(255, 102, 102) 90%, rgb(255, 255, 255) ); */
+    background-color: #000000;
+    
+    
+}
+footer p{
+    font-family: "Afacad Flux", serif;
+    font-size:  1.4rem;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 1.1rem;
+    text-align: center;
+}
