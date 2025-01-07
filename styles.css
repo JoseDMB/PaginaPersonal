@@ -135,6 +135,7 @@ h3{
 
 }
 
+
 /* Cambiar el tamaño de los párrafos en el reverso */
 #Work .card-back p {
     margin-bottom: 5%;
@@ -243,6 +244,15 @@ a:hover {
         font-style: normal;
         line-height: 1.5;
         margin-bottom: 0.5; /* Evita márgenes que afecten el tamaño */
+    }
+
+    #Skills .card-back ul{
+        font-size: 0.9rem;
+        font-family: "Afacad Flux", serif;
+        font-weight: 100;
+        font-style: normal;
+        line-height: 1.5;
+        margin-bottom: 0.5;
     }
 
     .card {
