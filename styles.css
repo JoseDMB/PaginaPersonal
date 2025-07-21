@@ -128,7 +128,7 @@ h3{
     margin: 0;
 }
 #Work .card-back h2 {
-    font-size: 3.3rem; /* Ajusta el tamaño según lo que necesites */
+    font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
     color:rgb(255, 255, 255); 
     font-weight: 400;
     margin:1%;
@@ -139,7 +139,7 @@ h3{
 /* Cambiar el tamaño de los párrafos en el reverso */
 #Work .card-back p {
     margin-bottom: 5%;
-    font-size: 1.7rem; /* Ajusta el tamaño según lo que necesites */
+    font-size: 1.3rem; /* Ajusta el tamaño según lo que necesites */
      /* Opcional: para mejorar la legibilidad */
 }
   
